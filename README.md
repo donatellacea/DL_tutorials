@@ -35,6 +35,6 @@ This repo contains tutorial aimed to introduce students to DL and the main pitfa
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
-
+    ├── License                <- Licenses for codes and data 
 
 --------

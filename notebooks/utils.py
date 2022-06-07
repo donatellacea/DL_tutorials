@@ -26,7 +26,7 @@ def get_MedNIST_dataframe(percentage_to_treat=None):
 
     base_path = '/content/drive/MyDrive/DL_tutorials/notebooks/'
     if not os.path.exists('MedNIST_0.5.zip'):
-        subprocess.run(['curl', '-L', 'https://www.dropbox.com/s/wrbfk4o63f3cn5k/MedNIST_0.5.zip?dl=1 > ',
+        subprocess.run(['curl', '-L', 'https://www.dropbox.com/s/wrbfk4o63f3cn5k/MedNIST_0.5.zip?dl=1',' > ',
                        base_path + 'MedNIST_0.5.zip'])
 
         shutil.unpack_archive(base_path + 'MedNIST_0.5.zip', base_path)

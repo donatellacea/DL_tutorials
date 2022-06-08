@@ -126,6 +126,7 @@ def evaluate_score(model, loader, device):
     total = 0
     model.eval()
     list_of_incorrect_preds = []
+    list_all_pred = []
     with torch.no_grad():
         for x, y, ima in loader:
             x = x.to(device=device)
@@ -133,10 +134,12 @@ def evaluate_score(model, loader, device):
 
             scores = model(x)
             _, pred = scores.max(1)
+            for yi, predi in zip(y, pred):
+                list_all_pred.append([yi.item(), predi.item()])
             for i, check in enumerate(pred != y):
                 if check:
                     list_of_incorrect_preds.append([ima[i], y[i].item(), pred[i].item()])
             correct += (pred == y).sum()
             total += pred.size(0)
         print("Accuracy:", correct / total * 100, "%")
-        return list_of_incorrect_preds
+        return list_of_incorrect_preds, list_all_pred

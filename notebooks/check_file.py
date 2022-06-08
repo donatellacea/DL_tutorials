@@ -55,7 +55,7 @@ def check_task_tm_2_1():
     print('This is a common problem in data science called overfitting.')
     print('There are several approaches to reduce it, one might be to have more training data, since so far ')
     print('the model has too many parameters and it is learning perfectly to reproduce the training set,')
-    print(' but is not able to generalize this result on new data.')
+    print('but is not able to generalize this result on new data.')
 
 
 def check_task_tm_2_2(confusion_matrix, sensitivity, specificity):
@@ -90,16 +90,14 @@ def check_MedNIST():
           "of an equal number of examples for each class, so in this case the network is biased during the training.")
     print("This results in models that have poor predictive performance, specifically for the minority class.")
     print("In the medical domain it is common to have imbalanced data, since"
-          "there are not equal numbers of samples of non-disease and with disease,")
-    print("as a reflection of the prevalence of normal cases in the real world, respect to the number of"
+          " there are not equal numbers of samples of non-disease and with disease,")
+    print("as a reflection of the prevalence of normal cases in the real world, respect to the number of "
           "people having a disease.")
     print("It is important to be aware of the existence of imbalanced data so that it will be possible to use "
           "techniques to deal with this bias.")
     print("Bias is something that is not concerning only algorithms, but it's intrinsic in our mind and society"
-          "and one main goal of building a good model is avoiding the technology perpetuating the negative human bias.")
-    print("An example among many others is the case of a camera that was mistakenly suggesting that the "
-          "smiling person in the portrait was blinking, but in reality the device was not able to recognize"
-          "the person as an Asian.")
+          " and one main goal of building a good model is avoiding technology ")
+    print("perpetuating the negative human bias.")
 
 
 def hint():

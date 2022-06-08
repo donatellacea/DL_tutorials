@@ -33,7 +33,7 @@ def get_MedNIST_dataframe(percentage_to_treat=None):
         shutil.rmtree(base_path + '__MACOSX')
 
     if percentage_to_treat is None:
-        percentage_to_treat = [0.2, 0.2, 0.2, 1., 1., 1.]
+        percentage_to_treat = [1., 1., 1., 0.2, 0.2, 0.2]
 
     data_path = base_path + 'MedNIST_0.5/'
     list_of_dirs = []

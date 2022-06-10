@@ -1,12 +1,12 @@
 def check_task_1(n_layer, n_neurons):
-    if (n_layer == 1) & (n_neurons == 1):
-        print('Correct solution! You can continue with task 2!')
+    if (n_layer == 0) & (n_neurons == 0):
+        print("Correct solution! In this simple linear problem the input and output layers are enough"
+              "to correctly classify the data points. So we don't need any hidden layers.")
+        print('You can continue with task 2!')
     elif (n_layer is None) | (n_neurons is None):
         print('Please insert both the number of layers and the total number of neurons.')
-    elif (0 == n_layer) | (0 == n_neurons):
-        print('Incorrect solution, try again! Try to increase the number of layers or the total number of neurons')
     else:
-        print('Incorrect solution, try again! Try to reduce the total number of neurons or the number of layers,'
+        print('Incorrect solution, try again! Try to reduce the total number of neurons or the number of hidden layers,'
               'the neural network can still learn fast and correct with less layers.')
 
 
@@ -16,17 +16,19 @@ def check_task_2(n_layer, n_neurons):
     elif (n_layer is None) | (n_neurons is None):
         print('Please insert both the number of layers and the total number of neurons.')
     elif (n_layer == 0) | (n_neurons == 0):
-        print('Incorrect solution, try again! Try to increase the total number of layers or the number of neurons')
+        print('Incorrect solution, try again! Try to increase the total number of hidden layers '
+              'or the number of neurons')
     else:
-        print('Incorrect solution, try again! Try to increase the total number of neurons or the number of  layers,'
-              ' the neural network can still learn fast and correct with less layers.')
+        print('Incorrect solution, try again! Try to increase the total number of neurons or '
+              'the number of hidden layers, the neural network can still learn fast and correct with less layers.')
 
 
 def check_task_3():
     print('At the beginning of the training process, the weights are randomly initialized.')
-    print('So in the first run the network was starting learning from scratch. ')
-    print('In the second run, instead, the network started with a proper initialization,'
-          ' because it learnt something from the previous experience.')
+    print('Everytime we click on the reset button, the network starts from different random values.')
+    print("Indeed, you can see the line in the background moves and what you're seeing is the computer trying to find "
+          "the best combination of weights and threshold to draw the straight line between two groups.")
+    print("So you can see the difference between an improper (first run) and a proper (second run) initialization.")
     print('In certain cases it might be useful to pre-train the model, i.e. you can use the weights you saved'
           ' from a previous network as the initial weight values for your new experiment.')
     print('Using pre-trained model is a kind of transfer learning, and can help improving the performances '

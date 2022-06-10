@@ -89,7 +89,8 @@ def check_MedNIST():
     print("This is one of the typical challenges of training an algorithm known as class imbalance.")
     print("It means that the classes are not equally represented in the dataset.")
     print("Most of the machine learning algorithms used for classification were designed around the assumption "
-          "of an equal number of examples for each class, so in this case the network is biased during the training.")
+          "of an equal number of examples for each class,")
+    print("so in this case the network is biased during the training.")
     print("This results in models that have poor predictive performance, specifically for the minority class.")
     print("In the medical domain it is common to have imbalanced data, since"
           " there are not equal numbers of samples of non-disease and with disease,")
